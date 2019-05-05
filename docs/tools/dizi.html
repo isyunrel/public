@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <title>Document</title>
+  <style>
+    #second { font-size: 100px; padding-top: 200px; text-align: center; }
+  </style>
+</head>
+<body>
+  
+  <h1 id="second">01</h1>
+
+  <script>
+    
+    let i = 1;
+    let oSecond = document.querySelector("#second");
+    setInterval(() => {
+      if(i == 20) {
+        i = 1;
+        oSecond.innerHTML = '01';
+      } else {
+        i++;
+        if(i < 10) {
+          oSecond.innerHTML = '0' + i;
+        } else {
+          oSecond.innerHTML = i;
+        }
+      }
+    }, 500)
+
+  </script>
+</body>
+</html>
