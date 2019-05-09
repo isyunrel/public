@@ -35,3 +35,19 @@
     * 教学设计是经验性的
 6. Instructional design typically is a team effort
     * 教学设计通常是团队的努力
+
+**Cone of Experience**
+
+1. Doing Experience - 做的经验
+    * Direct, purposeful experiences - 直接的目标化的经验
+    * Contrived experience - 策划的经验
+    * Dramatic participation - 参与
+2. Observe Experience - 观察的经验
+    * Demonstrations - 展示演示
+    * Field trips - 实地考察
+    * Exhibits - 展览
+    * Motion pictures - 动画
+    * Still pictures, radio-recodings - 静态图片，无线电录音
+3. Abstract Experience - 抽象的经验
+    * Verbal Experience - 口头体验
+    * Visual Symbols - 视觉符号
