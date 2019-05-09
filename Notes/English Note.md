@@ -23,10 +23,15 @@
 
 **characteristics of ID**
 
-1. Instructional design is learner-centered（教学设计以学习者为中心）
-2. Instructional design is goal-oriented（教学设计是以目标为导向的）
-3. Instructional design focuses on real-world performance（教学设计侧重于现实世界的表现
-）
-4. Instructional design focuses on outcomes that can be measured in a reliable and valid way（教学设计侧重于可以以可靠和有效的方式衡量的结果）
-5. Instructional design is empirical（教学设计是经验性的）
-6. Instructional design typically is a team effort（教学设计通常是团队的努力）
+1. Instructional design is learner-centered
+    * 教学设计以学习者为中心
+2. Instructional design is goal-oriented
+    * 教学设计是以目标为导向的
+3. Instructional design focuses on real-world performance
+    * 教学设计侧重于现实世界的表现
+4. Instructional design focuses on outcomes that can be measured in a reliable and valid way
+    * 教学设计侧重于可以以可靠和有效的方式衡量的结果
+5. Instructional design is empirical
+    * 教学设计是经验性的
+6. Instructional design typically is a team effort
+    * 教学设计通常是团队的努力
