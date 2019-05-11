@@ -4,6 +4,8 @@
 
 Instructional Technology is the theory and practice of design, development, utilization, management, and evaluation of processes and resources for learning.
 
+教学技术是学习过程和资源的设计，开发，利用，管理和评估的理论和实践。
+
 **Bloom的知识层次结构** 
 
 1. Knowledge（知识）
