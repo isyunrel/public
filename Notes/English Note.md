@@ -1,5 +1,9 @@
 # 英语笔记
 
+**教育技术学94定义**
+
+Instructional Technology is the theory and practice of design, development, utilization, management, and evaluation of processes and resources for learning.
+
 **Bloom的知识层次结构** 
 
 1. Knowledge（知识）
@@ -21,7 +25,7 @@
     * Judging the value of a product for a given purpose, using definite criteria
     * 使用明确的标准判断产品在特定目的的价值
 
-**characteristics of ID**
+**characteristics of ID / 教学设计的特点**
 
 1. Instructional design is learner-centered
     * 教学设计以学习者为中心
@@ -36,7 +40,7 @@
 6. Instructional design typically is a team effort
     * 教学设计通常是团队的努力
 
-**Cone of Experience**
+**Cone of Experience 经验之塔**
 
 1. Doing Experience - 做的经验
     * Direct, purposeful experiences - 直接的目标化的经验
