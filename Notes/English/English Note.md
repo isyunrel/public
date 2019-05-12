@@ -45,6 +45,7 @@
 
 **Cone of Experience 经验之塔**
 
+![图片](https://github.com/isyunrel/public/blob/master/Notes/English/img/1.png?raw=true)
 1. Doing Experience - 做的经验
     * Direct, purposeful experiences - 直接的目标化的经验
     * Contrived experience - 策划的经验
