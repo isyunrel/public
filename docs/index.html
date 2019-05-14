@@ -8,20 +8,35 @@
     <link rel="stylesheet" href="./css/global.css">
 </head>
 <body>
-    
-    <h1 class="pdx pdy">角落</h1>
 
-    <nav class="pdx">
+    <nav class="nav pdy">
+        <a href="javascript:" class="mgr">首页</a>
         <a href="javascript:" class="mgr">单词</a>
         <a href="javascript:" class="mgr">故事</a>
     </nav>
 
-    <audio id="bgm" src="./src/命に嫌われている.mp3" controls></audio>
+
+    <img src="./src/index-bg.jpg" alt="star.">
+
+    <p>仍然有很长距离要走，</p>
+    <p>像花了很多光年从远方而来，</p>
+    <p>又要花很多光年才抵达的星光。</p>
+    <p>—— 谢默斯·希尼《远方》</p>
+
+
+    
+    <audio id="bgm" class="hide" src="./src/命に嫌われている.mp3" controls></audio>
+    <a id="bgnBtn" href="javascript:void(0)">播放</a>
+
 
     <script>
-        !function() {
-            let oBgm = document.querySelector("#bgm");
-        }();
+        (()=>{
+            let oBgm = document.querySelector("#bgm"),
+                oBgmBtn = document.querySelector("#bgnBtn");
+            oBgmBtn.onclick = () => {
+                oBgm.play();
+            };
+        })();
     </script>
     <!-- <script src="./js/words.js" control></script> -->
 </body>

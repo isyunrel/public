@@ -5,18 +5,26 @@
     box-sizing: border-box;
 }
 
-a {
-    color: inherit;
+a { color: inherit; }
+
+p {
+    letter-spacing: 2px;
+    line-height: 2em;
 }
+
+img { max-width: 100%; }
 
 ul, ol {
     list-style: none;
 }
 
-
+html, body {
+    height: 100%;
+}
 body {
     font-size: 14px;
     color: #666666;
+    padding: 20px 15px;
 }
 
 
@@ -40,5 +48,14 @@ body {
 .mgt { margin-top: 15px; }
 .mgb { margin-bottom: 15px; }
 
+.hide {
+    display: none!important;
+}
+.show {
+    display: block!important;
+}
 
-.t-attention { color: red; }
+.nav {
+    font-size: 16px;
+    color: #000;
+}
