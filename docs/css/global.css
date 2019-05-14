@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+body {
+    font-size: 14px;
+    color: #666666;
+}
+
+
+/* function class */
+.pdx {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.pdy {
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+.pdl { padding-left: 15px; }
+.pdr { padding-right: 15px; }
+.pdt { padding-top: 15px; }
+.pdb { padding-bottom: 15px; }
+
+
+.mgr { margin-right: 15px; }
+.mgl { margin-left: 15px; }
+.mgt { margin-top: 15px; }
+.mgb { margin-bottom: 15px; }
+
+
+.t-attention { color: red; }
