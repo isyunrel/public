@@ -12,7 +12,10 @@ p {
     line-height: 2em;
 }
 
-img { max-width: 100%; }
+img {
+    max-width: 100%;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, .2);
+}
 
 ul, ol {
     list-style: none;
@@ -25,6 +28,7 @@ body {
     font-size: 14px;
     color: #666666;
     padding: 20px 15px;
+    background-color: #f7f7f7;
 }
 
 
@@ -58,4 +62,5 @@ body {
 .nav {
     font-size: 16px;
     color: #000;
+    padding: 30px 0;
 }
