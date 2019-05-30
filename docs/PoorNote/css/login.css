@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+}
+body {
+    background-image: url(../src/login__bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.login__ctn {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.title {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.login__ctn .input {
+    padding: 10px 0;
+}
+.login__ctn .input input[type=text],
+.login__ctn .input input[type=password] {
+    height: 40px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: 0;
+    padding: 0 15px;
+}
+
+.login__ctn .input p {
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #aaa;
+}
+.submit {
+    margin-top: 30px;
+}
+.submit input[type=checkbox] {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.submit button {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color: #7f7bec;
+    opacity: .5;
+    border-radius: 20px;
+    border: none;
+    margin-top: 10px;
+    transition: 300ms;
+}
+.submit button:hover {
+    opacity: 1;
+}
+.switch {
+    padding-top: 20px;
+    text-align: center;
+}
+.switch a:hover {
+    text-decoration: underline;
+}
+.regist__wrp {
+    display: none;
+}
+.header {
+    background-color: #fff0;
+    color: #fff;
+}

@@ -1,0 +1,142 @@
+.main__info {
+    padding: 50px 0;
+    background-color: #7f7bec;
+    overflow: hidden;
+    color: #fff;
+}
+.main__info .head__img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+    user-select: none;
+}
+.main__info .head__name {
+    float: left;
+    line-height: 100px;
+    margin-left: 20px;
+    font-size: 2em;
+}
+.info {
+    padding-top: 30px;
+}
+.info__tab {
+    border-bottom: 1px solid #7f7bec;
+}
+.info__tab li {
+    display: inline-block;
+    padding: 0 5px 7px 5px;
+    margin-right: 5px;
+}
+.info__tab li.act {
+    border-bottom: 3px solid #7f7bec;
+    color: #7f7bec;
+}
+.info__tab li:not([class*=act]) {
+    cursor: pointer;
+}
+.info__tab li:not([class*=act]):hover {
+    color: #7f7bec;
+}
+.info__pages {
+    padding-top: 40px;
+}
+.info__pages > li {
+    display: none;
+}
+.info__pages > li.act {
+    display: block!important;
+}
+.note__list {
+    widows: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.note__list > .note {
+    height: 150px;
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.note b.title {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+.note .color__block {
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+.note .nocolor__block {
+    padding: 5px;
+}
+.note p.content {
+    line-height: 1.5em;
+    margin-top: 10px;
+    font-size: 14px;
+    height: 4.5em;
+    line-clamp: 3;
+    display: -webkit-box;
+    box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.note__date,
+.note__option {
+    font-size: 12px;
+    color: #999;
+}
+.note__option {
+    float: right;
+    margin-left: 10px;
+}
+.note__option:hover {
+    color: #7f7bec;
+}
+
+
+.set input {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+.form__item {
+    display: block;
+    margin-bottom: 20px;
+}
+.form__item span {
+    display: inline-block;
+    width: 70px;
+}
+.show__account__set {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+.show__account__set:hover {
+    text-decoration: underline;
+}
+.account__set {
+    margin-top: 10px;
+}
+
+#setPass,
+#setName {
+    margin-left: 190px;
+    height: 30px;
+    width: 80px;
+    border-radius: 15px;
+    border: none;
+    font-size: 12px;
+    background-color: #cccccc;
+    color: #fff;
+}
+#setPass:hover,
+#setName:hover {
+    background-color: #7f7bec;
+}
+.account__set {
+}

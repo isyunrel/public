@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加笔记 - PoorNote</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+
+    <div id="login__tip">
+        您当前尚未登录，如果想进行更多操作，请<a href="./login.html">登录</a>
+    </div>
+    <header class="header">
+        <div class="box-inner">
+            <div class="header__logo">
+                <a href="./index.html">PoorNote</a>
+            </div>
+
+            <div class="header__search">
+                <input id="search__text" type="text" placeholder="搜索笔记">
+                <i id="search__btn" class="fa fa-search"></i>
+            </div>
+
+            <a class="login__btn" href="./login.html">登录</a>
+            
+            <div id="user">
+                <a href="./home.html">
+                    <img id="user__head" src="./src/head.jpg" alt="userhead哈哈哈">
+                </a>
+                <div class="user__options">
+                    <a href="home.html">个人主页</a>
+                    <a id="logOut" href="javascript:">登出</a>
+                </div>
+            </div>
+
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="./index.html"><i class="fa fa-home"></i> 首页</a></li>
+                    <li><a href="./write.html"><i class="fa fa-won"></i> 书写</a></li>
+                    <li><a href="./about.html"><i class="fa fa-info"></i> 关于</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="login__ctn">
+        <h1 class="title">登录</h1>
+        <div class="login__wrp">
+            <div class="input">
+                <input id="logCount" type="text" placeholder="请键入账号">
+                <p></p>
+            </div>
+            <div class="input">
+                <input id="logPwd" type="password" placeholder="请键入密码">
+                <p id="log__tip"></p>
+            </div>
+            <div class="submit">
+                <button id="logBtn">登录</button>
+            </div>
+        </div>
+        <div class="regist__wrp">
+            <div class="input">
+                <input id="regCount" minlength="6" maxlength="16" type="text" placeholder="请键入注册账号">
+                <p class="regTip">账号为6~15位的字母及数字组合</p>
+            </div>
+            <div class="input">
+                <input id="regPwd1" minlength="6" maxlength="16" type="password" placeholder="请键入密码">
+                <p class="regTip">密码为6~15位的字母及数字组合</p>
+            </div>
+            <div class="input">
+                <input id="regPwd2" minlength="6" maxlength="16" type="password" placeholder="重复键入密码">
+                <p class="regTip">重复密码</p>
+            </div>
+            <div class="submit">
+                <button id="regBtn">注册</button>
+            </div>
+        </div>
+
+        <div class="switch">
+            <a href="javascript:">还没有账号？立即注册</a>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/jquerysession.js"></script>
+    <script src="./js/global.js"></script>
+    <script>
+
+        !function() {
+            let oSwitch = document.querySelectorAll(".switch")[0],
+                aSwitchInnerText = ['还没有账号？立即注册', '已有账号？立即登录'],
+                oTitle = document.querySelectorAll(".title")[0],
+                aTitleInnerText = ['登录', '注册'],
+                aWrapper =[document.querySelectorAll(".login__wrp")[0],
+                        document.querySelectorAll(".regist__wrp")[0]]; 
+                
+                // false为登录，true为注册
+                iSwitchState = 0;
+            oSwitch.addEventListener("click", change);
+
+
+            function change() {
+                aWrapper[iSwitchState].style.display = "none";
+                iSwitchState = iSwitchState == 1 ? 0 : 1;
+                oSwitch.querySelectorAll('a')[0].innerText = aSwitchInnerText[iSwitchState];
+                oTitle.innerText = aTitleInnerText[iSwitchState];
+                aWrapper[iSwitchState].style.display = "block";
+            }
+
+
+
+
+            let oLogBtn = document.querySelector("#logBtn"),
+                oRegBtn = document.querySelector("#regBtn"),
+                // 登录信息
+                oLogCount = document.querySelector("#logCount"),
+                oLogPwd = document.querySelector("#logPwd"),
+                
+                // 注册信息
+                oRegCount = document.querySelector("#regCount"),
+                oRegPwd1 = document.querySelector("#regPwd1"),
+                oRegPwd2 = document.querySelector("#regPwd2");
+            oLogBtn.addEventListener("click", () => {
+                let sCount = oLogCount.value,
+                    sPwd = oLogPwd.value;
+                $.ajax({
+                    type: 'POST',
+                    url: "http://food.amazing-w.top/public/index/user/login",
+                    data: {user: sCount, pass: sPwd},
+                    success: (res) => {
+                        if(res === 'false') {
+                            $("#log__tip").text("账号或密码错误");
+                        } else {
+                            $("#logBtn").attr("disabled", "false");
+                            $("#logBtn").css("opacity", ".5");
+                            $("#logBtn").text("登录成功，正在跳转...");
+                            console.log(res);
+                            setTimeout(() => {
+                                console.log(res);
+                                $.session.set("userId", res);
+                                window.location.href = "./index.html";
+                            }, 1000);
+                        }
+                    }
+                })
+                    
+            });
+            oRegBtn.addEventListener("click", () => {
+                let sCount = oRegCount.value,
+                    sPwd1 = oRegPwd1.value,
+                    sPwd2 = oRegPwd2.value,
+                    bIsPass = true,
+                    aRegTip = document.querySelectorAll(".regTip");
+                if(!checkPassWord(sCount)) {
+                    aRegTip[0].style.color = "red";
+                    bIsPass = false;
+                } else {
+                    aRegTip[0].style.color = "#aaa";
+                }
+                if(!checkPassWord(sPwd1)) {
+                    aRegTip[1].style.color = "red";
+                    bIsPass = false;
+                } else {
+                    aRegTip[1].style.color = "#aaa";
+                }
+                if(sPwd1 !== sPwd2) {
+                    aRegTip[2].style.color = "red";
+                    bIsPass = false;
+                } else {
+                    aRegTip[2].style.color = "#aaa";
+                }
+
+                if(bIsPass) {
+                    // 注册Ajax
+                    $.ajax({
+                        type: 'POST',
+                        url: "http://food.amazing-w.top/public/index/user/register",
+                        data: {user: sCount, pass: sPwd1},
+                        success: (res) => {
+                            if(res === 'false') {
+                                aRegTip[0].style.color = "red";
+                                aRegTip[0].innerText = "当前账号已被注册";
+                            } else {
+                                console.log(res);
+                                $("#regBtn").attr("disabled", "false");
+                                $("#regBtn").css("opacity", ".5");
+                                $("#regBtn").text("注册成功，为您自动登录");
+                                console.log(res);
+                                setTimeout(() => {
+                                    $.session.set("userId", 12);
+                                    window.location.href = "./index.html";
+                                }, 2000);
+                            }
+                        }
+                    })
+                }
+
+
+            });
+            function checkPassWord(str) {  
+                let re =  /^[0-9a-zA-Z]*$/;
+                if(6 > str.length || str.length > 15) {
+                    return false;
+                }
+                if (!re.test(str)) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }();
+    </script>
+</body>
+</html>
